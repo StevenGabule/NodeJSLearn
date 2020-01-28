@@ -1,11 +1,1 @@
-[
-    {
-        title: "johndoe",
-        link: "pokay"
-    },
-    
-    {
-        title: "johndoe 2",
-        link: "pokay 2"
-    }
-]
+https://nodejs.org/en/feed/blog.xml

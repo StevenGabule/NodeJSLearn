@@ -15,7 +15,7 @@ function checkForRSSFile() {
 function readRSSFile(configFilename) {
     fs.readFile(configFilename, (err,feedList) => {
         if (err) return next(err);
-        feedList - feedList.toString().replace(/^\s+|\s+$/g, '').split('\n');
+        feedList = feedList.toString().replace(/^\s+|\s+$/g, '').split('\n');
         const random = Math.floor(Math.random() * feedList.length);
         next(null, feedList[random]);
     });
@@ -41,7 +41,7 @@ function parseRSSFeed(rss) {
     console.log(item.link);
 }
 
-const tasks =[
+const tasks = [
     checkForRSSFile,
     readRSSFile,
     downloadRSSFeed,
